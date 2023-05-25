@@ -28,8 +28,34 @@
   <title>Alerton</title>
 </head>
 <body>
-  <h1>Hello World!</h1>
+  <section class="modal hidden">
+    <div class="modal-header">
+      <h2 class="modal-title">What activity are you doing at the moment?</h2>
+      <button class="btn-close">&times;</button>
+    </div>
 
+    <div class="modal-body">
+      <label for="activity-select">Choose an activity:</label>
+
+      <select id="activity-select">
+        <option value="youtube">Youtube</option>
+        <option value="shorts">Shorts</option>
+        <option value="reddit">Reddit</option>
+        <option value="chess">Code</option>
+        <option value="chess">Chess</option>
+        <option value="reading">Reading</option>
+        <option value="videogame">Videogame</option>
+        <option value="anime">Anime</option>
+      </select>
+
+      <button class="btn btn-lg btn-submit">Submit</button>
+    </div>
+  
+  </section>
+  
+  <div class="overlay hidden"></div>
+  <button class="btn btn-open">Open Modal</button>
+  
   <script src="./js/main.js"></script>
 </body>
 </html>

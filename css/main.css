@@ -1,0 +1,57 @@
+.modal {
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2.5rem 5rem;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal.open {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal .modal-header {
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal .modal-header .modal-title {
+  font-size: 2.25rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+#activity-select {
+  margin-bottom: 2rem;
+}

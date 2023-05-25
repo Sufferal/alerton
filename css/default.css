@@ -1,3 +1,10 @@
+:root {
+  --primary-color: #333;
+  --secondary-color: #9B0154;
+  --tertiary-color: #f4f4f4;
+  --success-color: #4caf50;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -12,10 +19,57 @@ body {
   width: 100vw;
   height: 100vh;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   overflow: hidden;
+  position: relative;
 
   font-family: 'Ubuntu', sans-serif;
   font-size: 1.6rem;
-  color: white;
+  color: var(--primary-color);
   background: url('../img/background.jpg') no-repeat center/cover;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.4rem;
+  font-weight: 700;
+  background-color: black;
+  color: white;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.btn.btn-lg {
+  display: block;
+  width: 100%;
+}
+
+.btn.btn-submit {
+  background-color: var(--success-color);
+}
+
+.btn-open {
+  position: absolute;
+  background: var(--secondary-color);
+  bottom: 150px;
+}
+
+.btn-close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 0.3rem 0.5rem;
+  color: var(--tertiary-color);
+  background: var(--secondary-color);
+  border-radius: 5px;
 }
